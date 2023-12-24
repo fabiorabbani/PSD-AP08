@@ -1,0 +1,183 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/CS9
+Eethernet_ii_frame_parser
+Z0 w1703433305
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 7
+Z4 dC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08
+Z5 8C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/Ethernet_II_Frame_Parser.vhd
+Z6 FC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/Ethernet_II_Frame_Parser.vhd
+l0
+L5 1
+VK[WSZKB@fKSbP7z;Eb3o42
+!s100 ][k:]55JRn7SPoY^L`CJf3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1703433515
+!i10b 1
+Z9 !s108 1703433515.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/Ethernet_II_Frame_Parser.vhd|
+Z11 !s107 C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/Ethernet_II_Frame_Parser.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 24 ethernet_ii_frame_parser 0 22 K[WSZKB@fKSbP7z;Eb3o42
+!i122 7
+l92
+L30 111
+VzZA65Hm[Li@E]:ZjBI;TO1
+!s100 S>CzOWTIbU3Wb9Fhczh;=1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eethertype_parser
+Z14 w1703427425
+R1
+R2
+R3
+!i122 8
+R4
+Z15 8C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/EtherType_Parser.vhd
+Z16 FC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/EtherType_Parser.vhd
+l0
+L5 1
+V?N1?9>b^Lk@Nj`d^Wh`7o1
+!s100 zjSLI_7CQ`_[OTNXSJhbb1
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/EtherType_Parser.vhd|
+Z18 !s107 C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/EtherType_Parser.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 16 ethertype_parser 0 22 ?N1?9>b^Lk@Nj`d^Wh`7o1
+!i122 8
+l26
+L24 141
+Vc>6;cAF8QaBa54E]hN9LC0
+!s100 Ygo<EK@^XLR`@S^Pf^XmM0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eids
+Z19 w1703428227
+R1
+R2
+R3
+!i122 9
+R4
+Z20 8C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/IDS.vhd
+Z21 FC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/IDS.vhd
+l0
+L5 1
+V<DkR_FYKOV8@2_11oinE;0
+!s100 Cc@=13=VgIHP:?3QYC1z32
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/IDS.vhd|
+Z23 !s107 C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/IDS.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 3 ids 0 22 <DkR_FYKOV8@2_11oinE;0
+!i122 9
+l18
+L16 11
+VI:Eg8A4hiT`e:Dzi_BDH[1
+!s100 4]XN>bXmBPbbbDZ?Hf4Jj1
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Emac_address_parser
+Z24 w1703433243
+R1
+R2
+R3
+!i122 10
+R4
+Z25 8C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/MAC_Address_Parser.vhd
+Z26 FC:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/MAC_Address_Parser.vhd
+l0
+L5 1
+VjmkkHG_:z9<^^nT^6N5XD0
+!s100 YIQZ6lZhb3k3a8`Alo`fb0
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/MAC_Address_Parser.vhd|
+Z28 !s107 C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/MAC_Address_Parser.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z29 DEx4 work 18 mac_address_parser 0 22 jmkkHG_:z9<^^nT^6N5XD0
+!i122 10
+l18
+Z30 L16 14
+Z31 V9N]I]:hf=0G;PV:Io9XKl3
+Z32 !s100 n=d1A1]K:n1R2Nca_H<Pm3
+R7
+32
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13

@@ -1,0 +1,16 @@
+
+State Machine - |Ethernet_II_Frame_Parser|currSt
+Name currSt.COMPLETE currSt.DETECT currSt.PARSE currSt.FETCH currSt.IDLE 
+currSt.IDLE 0 0 0 0 0 
+currSt.FETCH 0 0 0 1 1 
+currSt.PARSE 0 0 1 0 1 
+currSt.DETECT 0 1 0 0 1 
+currSt.COMPLETE 1 0 0 0 1 
+
+State Machine - |Ethernet_II_Frame_Parser|nextSt
+Name nextSt.COMPLETE nextSt.DETECT nextSt.PARSE nextSt.FETCH nextSt.IDLE 
+nextSt.IDLE 0 0 0 0 0 
+nextSt.FETCH 0 0 0 1 1 
+nextSt.PARSE 0 0 1 0 1 
+nextSt.DETECT 0 1 0 0 1 
+nextSt.COMPLETE 1 0 0 0 1 
