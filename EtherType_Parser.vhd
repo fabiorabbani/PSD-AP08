@@ -5,6 +5,7 @@ use IEEE.numeric_std.all;
 entity EtherType_Parser is
     port (
         -- input
+        clk : in std_logic;
         data_in : in std_logic_vector(15 downto 0);
         -- output
         isIPv4 : out std_logic;
@@ -24,7 +25,7 @@ end entity EtherType_Parser;
 architecture rtl of EtherType_Parser is
     
 begin
-    process is
+    process (clk) is
     begin
         case data_in is
             when "0000100000000000" =>

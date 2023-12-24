@@ -6,9 +6,8 @@ entity Ethernet_II_Frame_Parser is
     port (
         -- input
         clk : in std_logic;
-        data_in : in std_logic_vector(12143 downto 0);
+        data_in : in std_logic_vector(111 downto 0);
         -- output
-        payloadAndCRC : out std_logic_vector(12031 downto 0);
         destMACAddress : out std_logic_vector(47 downto 0);
         srcMACAddress : out std_logic_vector(47 downto 0);
         isIPv4 : out std_logic;
@@ -31,6 +30,7 @@ architecture rtl of Ethernet_II_Frame_Parser is
     -- Component
     component MAC_Address_Parser is
         port(
+            clk : in std_logic;
             data_in : in std_logic_vector(95 downto 0);
             src_add : out std_logic_vector(47 downto 0);
             dst_add : out std_logic_vector(47 downto 0);
@@ -40,6 +40,7 @@ architecture rtl of Ethernet_II_Frame_Parser is
 
     component EtherType_Parser is
         port(
+            clk : in std_logic;
             data_in : in std_logic_vector(15 downto 0);
             isIPv4 : out std_logic;
             isARP : out std_logic;
@@ -57,6 +58,7 @@ architecture rtl of Ethernet_II_Frame_Parser is
 
     component IDS is
         port(
+            clk : in std_logic;
             is_broadcast : in std_logic;
             isARP : in std_logic;
             isRARP : in std_logic;
@@ -70,7 +72,7 @@ architecture rtl of Ethernet_II_Frame_Parser is
     signal currSt : STATE;
     signal nextSt : STATE;
 
-    signal data_in_temp : std_logic_vector(12143 downto 0);
+    signal data_in_temp : std_logic_vector(111 downto 0);
     signal data_add_temp : std_logic_vector(95 downto 0);
     signal data_typ_temp : std_logic_vector(15 downto 0);
     signal src_add : std_logic_vector(47 downto 0);
@@ -91,9 +93,9 @@ architecture rtl of Ethernet_II_Frame_Parser is
 
 begin
     -- portmap
-    addressParser : MAC_Address_Parser port map (data_add_temp, src_add, dst_add, isBroadcasttemp);
-    ethertypeParser : EtherType_Parser port map (data_typ_temp, isIPv4temp, isARPtemp, isIPv6temp, isVLANtaggedtemp, isIPCPtemp, isIPv6CPtemp, isLLDPtemp, isMPLSunicasttemp, isMPLSmulticasttemp, isRARPtemp, isOtherEthertypetemp);
-    detection : IDS port map (isBroadcasttemp, isARPtemp, isRARPtemp, sustemp);
+    addressParser : MAC_Address_Parser port map (clk, data_add_temp, src_add, dst_add, isBroadcasttemp);
+    ethertypeParser : EtherType_Parser port map (clk, data_typ_temp, isIPv4temp, isARPtemp, isIPv6temp, isVLANtaggedtemp, isIPCPtemp, isIPv6CPtemp, isLLDPtemp, isMPLSunicasttemp, isMPLSmulticasttemp, isRARPtemp, isOtherEthertypetemp);
+    detection : IDS port map (clk, isBroadcasttemp, isARPtemp, isRARPtemp, sustemp);
     process (clk) is
     begin
         if (rising_edge(clk)) then
@@ -108,16 +110,12 @@ begin
                     data_in_temp <= data_in;
                     nextSt <= PARSE;
                 when PARSE =>
-                    data_add_temp <= data_in_temp(12143 downto 12048);
-                    data_typ_temp <= data_in_temp(12047 downto 12032);
+                    data_add_temp <= data_in_temp(111 downto 16);
+                    data_typ_temp <= data_in_temp(15 downto 0);
                     nextSt <= DETECT;
                 when DETECT =>
-                    isBroadcasttemp <= isBroadcasttemp;
-                    isARPtemp <= isARPtemp;
-                    isRARPtemp <= isRARPtemp;
                     nextSt <= COMPLETE;
                 when COMPLETE =>
-                    payloadAndCRC <= data_in_temp(12031 downto 0);
                     destMACAddress <= dst_add;
                     srcMACAddress <= src_add;
                     isIPv4 <= isIPv4temp;

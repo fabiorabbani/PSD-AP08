@@ -1,13 +1,13 @@
-Fitter Status : Failed - Sun Dec 24 23:03:48 2023
+Fitter Status : Successful - Sun Dec 24 23:29:10 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : Ethernet_II_Frame_Parser
 Top-level Entity Name : Ethernet_II_Frame_Parser
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 12,219 / 56,480 ( 22 % )
-Total registers : 24407
-Total pins : 24,286 / 268 ( 9062 % )
+Logic utilization (in ALMs) : 98 / 56,480 ( < 1 % )
+Total registers : 343
+Total pins : 222 / 268 ( 83 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

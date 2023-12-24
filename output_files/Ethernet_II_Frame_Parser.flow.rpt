@@ -1,5 +1,5 @@
 Flow report for Ethernet_II_Frame_Parser
-Sun Dec 24 23:03:49 2023
+Sun Dec 24 23:29:28 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Flow Failed - Sun Dec 24 23:03:48 2023      ;
+; Flow Status                     ; Successful - Sun Dec 24 23:29:22 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; Ethernet_II_Frame_Parser                    ;
 ; Top-level Entity Name           ; Ethernet_II_Frame_Parser                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 12,219 / 56,480 ( 22 % )                    ;
-; Total registers                 ; 24407                                       ;
-; Total pins                      ; 24,286 / 268 ( 9062 % )                     ;
+; Logic utilization (in ALMs)     ; 98 / 56,480 ( < 1 % )                       ;
+; Total registers                 ; 343                                         ;
+; Total pins                      ; 222 / 268 ( 83 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+--------------------------+
 ; Option            ; Setting                  ;
 +-------------------+--------------------------+
-; Start date & time ; 12/24/2023 23:02:45      ;
+; Start date & time ; 12/24/2023 23:26:52      ;
 ; Main task         ; Compilation              ;
 ; Revision Name     ; Ethernet_II_Frame_Parser ;
 +-------------------+--------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589194.170343376535904         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589194.170343521238544         ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -92,9 +92,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 3.7                     ; 5065 MB             ; 00:00:30                           ;
-; Fitter               ; 00:00:25     ; 1.0                     ; 5303 MB             ; 00:00:08                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4922 MB             ; 00:00:03                           ;
+; Fitter               ; 00:02:10     ; 1.0                     ; 7416 MB             ; 00:01:27                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4880 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.4                     ; 5303 MB             ; 00:00:03                           ;
+; Total                ; 00:02:32     ; --                      ; --                  ; 00:01:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,6 +107,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LAPTOP-U4OJJ8RO  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; LAPTOP-U4OJJ8RO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-U4OJJ8RO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-U4OJJ8RO  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -113,6 +117,8 @@ https://fpgasoftware.intel.com/eula.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Ethernet_II_Frame_Parser -c Ethernet_II_Frame_Parser
 quartus_fit --read_settings_files=off --write_settings_files=off Ethernet_II_Frame_Parser -c Ethernet_II_Frame_Parser
+quartus_asm --read_settings_files=off --write_settings_files=off Ethernet_II_Frame_Parser -c Ethernet_II_Frame_Parser
+quartus_sta Ethernet_II_Frame_Parser -c Ethernet_II_Frame_Parser
 
 
 

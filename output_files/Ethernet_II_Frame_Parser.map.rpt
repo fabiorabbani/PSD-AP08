@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Ethernet_II_Frame_Parser
-Sun Dec 24 23:03:22 2023
+Sun Dec 24 23:26:59 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -45,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Dec 24 23:03:22 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec 24 23:26:59 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; Ethernet_II_Frame_Parser                    ;
 ; Top-level Entity Name           ; Ethernet_II_Frame_Parser                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 24407                                       ;
-; Total pins                      ; 24,286                                      ;
+; Total registers                 ; 343                                         ;
+; Total pins                      ; 222                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -160,22 +160,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 3.65        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  29.1%      ;
-;     Processor 3            ;  23.7%      ;
-;     Processor 4            ;  23.7%      ;
-;     Processor 5            ;  23.7%      ;
-;     Processor 6            ;  23.7%      ;
-;     Processor 7            ;  23.7%      ;
-;     Processor 8            ;  23.7%      ;
-;     Processor 9            ;  23.6%      ;
-;     Processor 10           ;  23.6%      ;
-;     Processor 11           ;  23.6%      ;
-;     Processor 12           ;  23.3%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -196,7 +186,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 12216     ;
+; Estimate of Logic utilization (ALMs needed) ; 184       ;
 ;                                             ;           ;
 ; Combinational ALUT usage for logic          ; 45        ;
 ;     -- 7 input functions                    ; 0         ;
@@ -205,29 +195,29 @@ https://fpgasoftware.intel.com/eula.
 ;     -- 4 input functions                    ; 3         ;
 ;     -- <=3 input functions                  ; 8         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 24407     ;
+; Dedicated logic registers                   ; 343       ;
 ;                                             ;           ;
-; I/O pins                                    ; 24286     ;
+; I/O pins                                    ; 222       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 24407     ;
-; Total fan-out                               ; 109861    ;
-; Average fan-out                             ; 1.50      ;
+; Maximum fan-out                             ; 343       ;
+; Total fan-out                               ; 1573      ;
+; Average fan-out                             ; 1.89      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+-------+--------------+------------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins  ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name              ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+-------+--------------+------------------------------------------------------------+--------------------------+--------------+
-; |Ethernet_II_Frame_Parser             ; 45 (8)              ; 24407 (24407)             ; 0                 ; 0          ; 24286 ; 0            ; |Ethernet_II_Frame_Parser                                  ; Ethernet_II_Frame_Parser ; work         ;
-;    |EtherType_Parser:ethertypeParser| ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0     ; 0            ; |Ethernet_II_Frame_Parser|EtherType_Parser:ethertypeParser ; EtherType_Parser         ; work         ;
-;    |IDS:detection|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0     ; 0            ; |Ethernet_II_Frame_Parser|IDS:detection                    ; IDS                      ; work         ;
-;    |MAC_Address_Parser:addressParser| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0     ; 0            ; |Ethernet_II_Frame_Parser|MAC_Address_Parser:addressParser ; MAC_Address_Parser       ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+-------+--------------+------------------------------------------------------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name              ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------------+--------------+
+; |Ethernet_II_Frame_Parser             ; 45 (8)              ; 343 (343)                 ; 0                 ; 0          ; 222  ; 0            ; |Ethernet_II_Frame_Parser                                  ; Ethernet_II_Frame_Parser ; work         ;
+;    |EtherType_Parser:ethertypeParser| ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Ethernet_II_Frame_Parser|EtherType_Parser:ethertypeParser ; EtherType_Parser         ; work         ;
+;    |IDS:detection|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Ethernet_II_Frame_Parser|IDS:detection                    ; IDS                      ; work         ;
+;    |MAC_Address_Parser:addressParser| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Ethernet_II_Frame_Parser|MAC_Address_Parser:addressParser ; MAC_Address_Parser       ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -264,12 +254,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24407 ;
+; Total registers                              ; 343   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24397 ;
+; Number of registers using Clock Enable       ; 333   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -279,8 +269,8 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 24407                       ;
-;     ENA               ; 24397                       ;
+; arriav_ff             ; 343                         ;
+;     ENA               ; 333                         ;
 ;     plain             ; 10                          ;
 ; arriav_lcell_comb     ; 45                          ;
 ;     normal            ; 45                          ;
@@ -289,10 +279,10 @@ Encoding Type:  One-Hot
 ;         4 data inputs ; 3                           ;
 ;         5 data inputs ; 13                          ;
 ;         6 data inputs ; 21                          ;
-; boundary_port         ; 24286                       ;
+; boundary_port         ; 222                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 0.01                        ;
+; Average LUT depth     ; 0.86                        ;
 +-----------------------+-----------------------------+
 
 
@@ -301,7 +291,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -311,40 +301,45 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Dec 24 23:02:45 2023
+    Info: Processing started: Sun Dec 24 23:26:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ethernet_II_Frame_Parser -c Ethernet_II_Frame_Parser
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Warning (12125): Using design file ethernet_ii_frame_parser.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Ethernet_II_Frame_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 30
+    Info (12022): Found design unit 1: Ethernet_II_Frame_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 29
     Info (12023): Found entity 1: Ethernet_II_Frame_Parser File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 5
 Info (12127): Elaborating entity "Ethernet_II_Frame_Parser" for the top level hierarchy
 Warning (12125): Using design file mac_address_parser.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: MAC_Address_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 16
+    Info (12022): Found design unit 1: MAC_Address_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 17
     Info (12023): Found entity 1: MAC_Address_Parser File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 5
-Info (12128): Elaborating entity "MAC_Address_Parser" for hierarchy "MAC_Address_Parser:addressParser" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at mac_address_parser.vhd(24): signal "dst_add_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 24
+Info (12128): Elaborating entity "MAC_Address_Parser" for hierarchy "MAC_Address_Parser:addressParser" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at mac_address_parser.vhd(22): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at mac_address_parser.vhd(23): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at mac_address_parser.vhd(24): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at mac_address_parser.vhd(25): signal "dst_add_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/mac_address_parser.vhd Line: 25
 Warning (12125): Using design file ethertype_parser.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: EtherType_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethertype_parser.vhd Line: 24
+    Info (12022): Found design unit 1: EtherType_Parser-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethertype_parser.vhd Line: 25
     Info (12023): Found entity 1: EtherType_Parser File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethertype_parser.vhd Line: 5
-Info (12128): Elaborating entity "EtherType_Parser" for hierarchy "EtherType_Parser:ethertypeParser" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 95
+Info (12128): Elaborating entity "EtherType_Parser" for hierarchy "EtherType_Parser:ethertypeParser" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at ethertype_parser.vhd(30): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethertype_parser.vhd Line: 30
 Warning (12125): Using design file ids.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: IDS-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 16
+    Info (12022): Found design unit 1: IDS-rtl File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 17
     Info (12023): Found entity 1: IDS File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 5
-Info (12128): Elaborating entity "IDS" for hierarchy "IDS:detection" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at ids.vhd(21): signal "isARP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at ids.vhd(21): signal "isRARP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 21
+Info (12128): Elaborating entity "IDS" for hierarchy "IDS:detection" File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ethernet_ii_frame_parser.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at ids.vhd(22): signal "isARP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at ids.vhd(22): signal "isRARP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at ids.vhd(22): signal "is_broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Darmawan Hanif/OneDrive - UNIVERSITAS INDONESIA/Universitas Indonesia/PSD/PSD-AP08/ids.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 48733 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12145 input pins
-    Info (21059): Implemented 12141 output pins
-    Info (21061): Implemented 24447 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5065 megabytes
-    Info: Processing ended: Sun Dec 24 23:03:22 2023
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:38
+Info (21057): Implemented 605 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 113 input pins
+    Info (21059): Implemented 109 output pins
+    Info (21061): Implemented 383 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4922 megabytes
+    Info: Processing ended: Sun Dec 24 23:26:59 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
 
 

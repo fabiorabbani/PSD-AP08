@@ -5,6 +5,7 @@ use IEEE.numeric_std.all;
 entity MAC_Address_Parser is
     port (
         -- input
+        clk : in std_logic;
         data_in : in std_logic_vector(95 downto 0);
         -- output
         src_add : out std_logic_vector(47 downto 0);
@@ -16,7 +17,7 @@ end entity MAC_Address_Parser;
 architecture rtl of MAC_Address_Parser is
     signal dst_add_temp : std_logic_vector(47 downto 0);
 begin
-    process is
+    process (clk) is
     begin
         src_add <= data_in(47 downto 0);
         dst_add <= data_in(95 downto 48);
